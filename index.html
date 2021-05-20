@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner Loading</title>
+
+    <style>
+        body{
+            background-color: teal;
+
+        }
+
+        .content{
+            width: 150px;
+            height: 150px;
+            background-color: black;
+            border-radius: 10px;
+            margin: 200px auto;
+
+        }
+
+        .spinner{
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+            left: 20%;
+            top: 20%;
+            
+        }
+
+        .spinner div{
+            box-sizing: border-box;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            margin: 10px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            animation: spinner 1.2s cubic-bezier(0.5,0,0.5,1) infinite;
+            border-color: #fff transparent transparent transparent;
+        }
+
+        .spinner div:nth-child(1){
+            animation-delay: -0.45s;
+        }
+
+        .spinner div:nth-child(2){
+            animation-delay: -0.3s;
+        }
+
+        .spinner div:nth-child(3){
+            animation-delay: -0.15s;
+        }
+
+
+        @keyframes spinner {
+            0%{
+                transform: rotate(0deg);
+            }
+
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    <div class="content">
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
